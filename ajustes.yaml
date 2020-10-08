@@ -1,0 +1,215 @@
+swagger: "2.0"
+info:
+  description: "Frager's ajustes"
+  version: "1.0.0"
+  title: "Ajustes"
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "apiteam@swagger.io"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "ajustes.swagger.io"
+basePath: "/v2"
+tags:
+- name: "ajustes"
+  description: "Everything about your ajustes"
+  externalDocs:
+    description: "Find out more"
+    url: "http://swagger.io"
+schemes:
+- "https"
+- "http"
+paths:
+  /ajustes:
+    post:
+      tags:
+      - "ajustes"
+      summary: "Add a new ajustes to the db"
+      description: ""
+      operationId: "addajustes"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "ajustes object that needs to be added to the db"
+        required: true
+        schema:
+          $ref: "#/definitions/ajustes"
+      responses:
+        "405":
+          description: "Invalid input"
+      security:
+      - categorydb_auth:
+        - "write:ajustes"
+        - "read:ajustes"
+    put:
+      tags:
+      - "ajustes"
+      summary: "Update an existing ajustes"
+      description: ""
+      operationId: "updateajustes"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "ajustes object that needs to be added to the db"
+        required: true
+        schema:
+          $ref: "#/definitions/ajustes"
+      responses:
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "ajustes not found"
+        "405":
+          description: "Validation exception"
+      security:
+      - categorydb_auth:
+        - "write:ajustes"
+        - "read:ajustes"
+        
+  /ajustes/{ajustesId}:
+    get:
+      tags:
+      - "ajustes"
+      summary: "Find ajustes by ID"
+      description: "Returns a single ajustes"
+      operationId: "getajustesById"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "ajustesId"
+        in: "path"
+        description: "ID of ajustes to return"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/ajustes"
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "ajustes not found"
+      security:
+      - api_key: []
+    post:
+      tags:
+      - "ajustes"
+      summary: "Updates a ajustes in the db with form data"
+      description: ""
+      operationId: "updateajustesWithForm"
+      consumes:
+      - "application/x-www-form-urlencoded"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "ajustesId"
+        in: "path"
+        description: "ID of ajustes that needs to be updated"
+        required: true
+        type: "integer"
+        format: "int64"
+      - name: "name"
+        in: "formData"
+        description: "Updated name of the ajustes"
+        required: false
+        type: "string"
+      - name: "status"
+        in: "formData"
+        description: "Updated status of the ajustes"
+        required: false
+        type: "string"
+      responses:
+        "405":
+          description: "Invalid input"
+      security:
+      - categorydb_auth:
+        - "write:ajustes"
+        - "read:ajustes"
+    delete:
+      tags:
+      - "ajustes"
+      summary: "Deletes a ajustes"
+      description: ""
+      operationId: "deleteajustes"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "api_key"
+        in: "header"
+        required: false
+        type: "string"
+      - name: "ajustesId"
+        in: "path"
+        description: "ajustes id to delete"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "ajustes not found"
+      security:
+      - categorydb_auth:
+        - "write:ajustes"
+        - "read:ajustes"
+  
+securityDefinitions:
+  categorydb_auth:
+    type: "oauth2"
+    authorizationUrl: "http://categorydb.swagger.io/oauth/dialog"
+    flow: "implicit"
+    scopes:
+      write:ajustes: "modify ajustes in your account"
+      read:ajustes: "read your ajustes"
+  api_key:
+    type: "apiKey"
+    name: "api_key"
+    in: "header"
+definitions:
+  ajustes:
+    type: "object"
+    properties:
+      id:
+        type: "string"
+      idUsuario:
+        type: "integer"
+      colorFondo:
+        type: "string"
+      tamanoLetra:
+        type: "integer"
+      SonidoON:
+        type: "integer"
+    xml:
+      name: "ajustes"
+  ApiResponse:
+    type: "object"
+    properties:
+      code:
+        type: "integer"
+        format: "int32"
+      type:
+        type: "string"
+      message:
+        type: "string"
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"
