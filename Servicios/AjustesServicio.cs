@@ -19,7 +19,7 @@ namespace Ajustes_Fragen.Servicios
             var client = new MongoClient("mongodb+srv://admin:Nicolas2020@ajustescloster.ajwc8.mongodb.net/AjustesDB?retryWrites=true&w=majority");
             var database = client.GetDatabase("AjustesDB");
 
-            _ajustes = database.GetCollection<Ajustes>(settings.AjustesCollectionName);
+            _ajustes = database.GetCollection<Ajustes>("Ajustes");
         }
 
         public List<Ajustes> Get()
