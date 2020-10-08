@@ -69,13 +69,13 @@ namespace Ajustes_Fragen.Controllers
         }
 
         [HttpDelete("{id}")]
-        public String Delete(string id)
+        public int Delete(string id)
         {
             var _ajustes = ajustesS.Get(id);
 
             if (_ajustes == null)
             {
-                return null;
+                return 0;
             }
 
             return ajustesS.Remove(_ajustes);

@@ -49,17 +49,17 @@ namespace Ajustes_Fragen.Servicios
             return ajus;
         }
 
-        public String Remove(Ajustes ajus)
+        public int Remove(Ajustes ajus)
         {
             string _id = ajus.Id;
             _ajustes.DeleteOne(aj => aj.Id == ajus.Id);
-            return _id;
+            return 1;
         }
 
-        public String Remove(string id)
+        public int Remove(string id)
         {
             _ajustes.DeleteOne(aj => aj.Id == id);
-            return id;
+            return 1;
         }
     }
 }
