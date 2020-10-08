@@ -13,9 +13,9 @@ namespace Ajustes_Fragen.Modelos
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
 
-        [BsonRepresentation(BsonType.ObjectId)]
+        [BsonRepresentation(BsonType.Int32)]
         [BsonElement("IdUsuario")]
-        public string IdUsuario { get; set; }
+        public int IdUsuario { get; set; }
 
         [BsonRepresentation(BsonType.String)]
         [BsonElement("colorFondo")]

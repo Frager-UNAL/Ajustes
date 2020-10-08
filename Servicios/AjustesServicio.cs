@@ -36,17 +36,17 @@ namespace Ajustes_Fragen.Servicios
             
         }
 
-        public String Create(Ajustes ajuste)
+        public Ajustes Create(Ajustes ajuste)
         {
             _ajustes.InsertOne(ajuste);
-            return ajuste.ToJson();
+            return ajuste;
         }
 
-        public String Update(string id, Ajustes ajus)
+        public Ajustes Update(string id, Ajustes ajus)
         {
             ajus.Id = id;
             _ajustes.ReplaceOne(aj => aj.Id == id, ajus);
-            return ajus.ToJson();
+            return ajus;
         }
 
         public String Remove(Ajustes ajus)

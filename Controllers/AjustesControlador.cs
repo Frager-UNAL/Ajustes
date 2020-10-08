@@ -22,19 +22,14 @@ namespace Ajustes_Fragen.Controllers
         }
 
         [HttpGet]
-        public List<String> Get()
+        public List<Ajustes> Get()
         {
-            List<String> listString = new List<string>();
             var listaAjustes = ajustesS.Get();
-            foreach(Ajustes ajuste in listaAjustes)
-            {
-                listString.Add(ajuste.ToJson());
-            }
-            return listString;
+            return listaAjustes;
         }
 
         [HttpGet("{id}")]
-        public String Get(string id)
+        public Ajustes Get(string id)
         {
             var _ajustes = ajustesS.Get(id);
 
@@ -43,11 +38,11 @@ namespace Ajustes_Fragen.Controllers
                 return null;
             }
 
-            return _ajustes.ToJson();
+            return _ajustes;
         }
 
         [HttpPost]
-        public String Create([FromBody] Ajustes _ajustes)
+        public Ajustes Create([FromBody] Ajustes _ajustes)
         {
             try
             {
@@ -55,13 +50,13 @@ namespace Ajustes_Fragen.Controllers
             }
             catch (Exception ex)
             { 
-                return ex.ToString();
+                return null;
             }
             
         }
 
         [HttpPut("{id}")]
-        public String PUT(string id, [FromBody] Ajustes value)
+        public Ajustes PUT(string id, [FromBody] Ajustes value)
         {
             var _ajustes = ajustesS.Get(id);
 
