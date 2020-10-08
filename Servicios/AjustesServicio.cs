@@ -12,7 +12,7 @@ namespace Ajustes_Fragen.Servicios
     public class AjustesServicio
     {
         private IMongoCollection<Ajustes> _ajustes;
-
+         
         public AjustesServicio(IAjustesDatabaseSettings settings)
         {
             

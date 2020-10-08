@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:50810",
+      "applicationUrl": "http://localhost:5000",
       "sslPort": 0
     }
   },
@@ -29,7 +29,7 @@
     "Docker": {
       "commandName": "Docker",
       "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/ajustes",
+      "launchUrl": "{scheme}://{IPAddress}:{port}",
       "publishAllPorts": true,
       "useSSL": true
     }
