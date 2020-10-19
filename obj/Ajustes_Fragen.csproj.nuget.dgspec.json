@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ADMIN\\source\\repos\\Ajustes_Fragen\\Ajustes_Fragen.csproj": {}
+    "D:\\Nicolas\\9\\Arquitectura\\Ajustes\\Ajustes_Fragen.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ADMIN\\source\\repos\\Ajustes_Fragen\\Ajustes_Fragen.csproj": {
+    "D:\\Nicolas\\9\\Arquitectura\\Ajustes\\Ajustes_Fragen.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\source\\repos\\Ajustes_Fragen\\Ajustes_Fragen.csproj",
+        "projectUniqueName": "D:\\Nicolas\\9\\Arquitectura\\Ajustes\\Ajustes_Fragen.csproj",
         "projectName": "Ajustes_Fragen",
-        "projectPath": "C:\\Users\\ADMIN\\source\\repos\\Ajustes_Fragen\\Ajustes_Fragen.csproj",
+        "projectPath": "D:\\Nicolas\\9\\Arquitectura\\Ajustes\\Ajustes_Fragen.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\source\\repos\\Ajustes_Fragen\\obj\\",
+        "outputPath": "D:\\Nicolas\\9\\Arquitectura\\Ajustes\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",

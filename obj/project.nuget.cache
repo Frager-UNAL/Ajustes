@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RK+fdd9TNOfGj7Y3rPHtKHt145grK54aMzOVrSde8R/aHI5Py1GMfzG6DnEORXGUHC1K486u6A2BV4uVEZF7Jg==",
+  "dgSpecHash": "DVkWF1bEg2X3MXeQY6+tupbuuFV5GwHPRcOXL81uXlpVakCciXBCuQiKSZxUIY3V+gy4a67kFmrI5fkhDRt98A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ADMIN\\source\\repos\\Ajustes_Fragen\\Ajustes_Fragen.csproj",
+  "projectFilePath": "D:\\Nicolas\\9\\Arquitectura\\Ajustes\\Ajustes_Fragen.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\dnsclient\\1.3.1\\dnsclient.1.3.1.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
